@@ -1,34 +1,19 @@
-# Cat Facts Explorer
+# Cat facts
 
-A beautiful, responsive application that displays random cat facts with a modern user interface. Built with React, TypeScript, and Tailwind CSS.
+Es una página que sirve para conocer nuevos datos que no conocias de los gatos
 
-## Features
 
-- Fetch and display random cat facts from a public API
-- Save your favorite facts to revisit later
-- Search for facts containing specific keywords
-- Toggle between dark and light modes
-- Fully responsive design for all device sizes
-- Loading and error state handling
+## Para correrlo necesitas:
 
-## Getting Started
+1. Copiar y pegar el repositorio en una carpeta
+2. Instalar las dependencias con el "npm install"
+3. Correrlo escribiendo "npm run dev"
+4. Abrir localhost:3000 
 
-1. Clone the repository
-2. Install dependencies with `npm install`
-3. Run the development server with `npm run dev`
-4. Open your browser to the URL displayed in the terminal
+## Estructura
 
-## Technologies Used
-
-- React 18
-- TypeScript
-- Tailwind CSS
-- Lucide React for icons
-
-## App Structure
-
-- `src/App.tsx` - Main application component
-- `src/components/` - Reusable UI components
-- `src/hooks/` - Custom React hooks
-- `src/types/` - TypeScript type definitions
-- `src/services/` - API service functions
+- `src/App.tsx` - Es el componente principal del proyecto
+- `src/components/` - Componentes de la interfaz de usuario
+- `src/hooks/` - Hooks personalizados de React
+- `src/types/` - Definiciones de tipos de TypeScript
+- `src/services/` - Funciones de servicio de la API
