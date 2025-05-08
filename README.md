@@ -17,3 +17,4 @@ Es una página que sirve para conocer nuevos datos que no conocias de los gatos
 - `src/hooks/` - Hooks personalizados de React
 - `src/types/` - Definiciones de tipos de TypeScript
 - `src/services/` - Funciones de servicio de la API
+## **la pagina está en ingles porque la API da los datos en ingles**
