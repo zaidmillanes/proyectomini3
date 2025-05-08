@@ -3,41 +3,25 @@ import { ApiResponse } from '../types';
 const API_URL = 'https://catfact.ninja';
 
 export const fetchRandomFact = async (): Promise<ApiResponse> => {
-  try {
-    const response = await fetch(`${API_URL}/fact`);
-    
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
-    }
-    
-    return await response.json();
-  } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(`Failed to fetch cat fact: ${error.message}`);
-    }
-    throw new Error('Failed to fetch cat fact');
-  }
+  const response = await fetch(`${API_URL}/fact`);
+  if (!response.ok) return { fact: 'Unable to fetch fact', length: 0 };
+  return response.json();
 };
 
 export const searchFacts = async (query: string): Promise<ApiResponse[]> => {
-  try {
-    // Increased limit to 100 facts for more comprehensive search results
-    const response = await fetch(`${API_URL}/facts?limit=100`);
-    
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    
-    // Filter facts that contain the query (case insensitive)
-    return data.data.filter((fact: ApiResponse) => 
-      fact.fact.toLowerCase().includes(query.toLowerCase())
-    );
-  } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(`Failed to search facts: ${error.message}`);
-    }
-    throw new Error('Failed to search facts');
-  }
+  const response = await fetch(`${API_URL}/facts?limit=100`);
+  if (!response.ok) return [];
+  
+  const data = await response.json();
+  return data.data
+    .filter((fact: ApiResponse) => fact.fact.toLowerCase().includes(query.toLowerCase()))
+    .slice(0, 10);
+};
+
+export const getAllFacts = async (): Promise<ApiResponse[]> => {
+  const response = await fetch(`${API_URL}/facts?limit=100`);
+  if (!response.ok) return [];
+  
+  const data = await response.json();
+  return data.data;
 };
