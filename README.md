@@ -8,7 +8,7 @@ Es una página que sirve para conocer nuevos datos que no conocias de los gatos
 1. Copiar y pegar el repositorio en una carpeta
 2. Instalar las dependencias con el "npm install"
 3. Correrlo escribiendo "npm run dev"
-4. Abrir localhost:3000 
+4. Abrir localhost:5172
 
 ## Estructura
 
