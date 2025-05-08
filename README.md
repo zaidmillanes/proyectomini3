@@ -18,5 +18,3 @@ Es una página que sirve para conocer nuevos datos que no conocias de los gatos
 - `src/types/` - Definiciones de tipos de TypeScript
 - `src/services/` - Funciones de servicio de la API
 
-- 
-## ***LA PAGINA ESTA EN INGLES***
